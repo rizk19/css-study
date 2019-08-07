@@ -1,0 +1,5 @@
+terminal 1: (dir: starter/sass)
+npm run compile:sass
+
+terminal 2: (dir: starter)
+live-server
