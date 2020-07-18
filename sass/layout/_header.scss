@@ -3,11 +3,11 @@
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.739),
             rgba($color-primary, 0.459)),
-        url(../img/hero.jpg);
+        url(../img/eki-asakusa-1-big.jpg);
     background-size: cover;
     background-position: top;
     position: relative;
-
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
 
     &__logo-box {

@@ -1,5 +1,6 @@
 .btn {
 
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -10,19 +11,14 @@
         transition: all .3s;
         position: relative;
         font-size: $default-font-size;
+
+        border: none;
+        cursor: pointer;
     }
 
-    &:hover {
-        transform: translateY(-0.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-
-        &::after {
-            transform: scaleX(1.4) scaleY(1.6);
-            opacity: 0;
-        }
-    }
-
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translate(-0.1rem);
         box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
 
@@ -32,9 +28,98 @@
         background-color: $color-white;
         color: $color-grey-dark;
 
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+            &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+
         &::after {
             background-color: rgba($color-compound-primary-purple, 0.856);
             color: $color-white !important;
+        }
+    }
+
+    &--green {
+        background-color: $color-tertiary-light;
+        color: $color-white;
+
+        &:hover {
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+            &::after {
+                transform: scaleX(1.4) scaleY(1.6);
+                opacity: 0;
+            }
+        }
+
+        &::after {
+            background-color: rgba($color-compound-tertiary-yellow, 0.856);
+            color: $color-white !important;
+        }
+    }
+
+    &--cta {
+        &--1 {
+            background-color: $color-white;
+            color: $color-secondary-light;
+
+            &:hover {
+                transform: skewY(5deg) scale(1.1);
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+                &::after {
+                    transform: scaleX(1.4) scaleY(1.6);
+                    opacity: 0;
+                }
+            }
+
+            &::after {
+                color: $color-white !important;
+            }
+        }
+
+        &--2 {
+            background-color: $color-white;
+            color: $color-tertiary-light;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+                &::after {
+                    transform: scaleX(1.4) scaleY(1.6);
+                    opacity: 0;
+                }
+            }
+
+            &::after {
+                color: $color-white !important;
+            }
+        }
+
+        &--3 {
+            background-color: $color-white;
+            color: $color-primary-light;
+
+            &:hover {
+                transform: skewY(-5deg) scale(1.1);
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+                &::after {
+                    transform: scaleX(1.4) scaleY(1.6);
+                    opacity: 0;
+                }
+            }
+
+            &::after {
+                color: $color-white !important;
+            }
         }
     }
 
@@ -58,6 +143,7 @@
 }
 
 .btn-text {
+
     &:link,
     &:visited {
         font-size: $default-font-size;
